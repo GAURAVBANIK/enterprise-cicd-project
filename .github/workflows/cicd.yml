@@ -20,7 +20,7 @@ jobs:
 
       - name: Trivy scan
         uses: aquasecurity/trivy-action@master
-         with:
+        with:
               scan-type: fs
               scan-ref: .
 
