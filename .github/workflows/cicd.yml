@@ -19,7 +19,11 @@ jobs:
       - run: npm test
 
       - name: Trivy scan
-        run: trivy fs .
+        uses: aquasecurity/trivy-action@master
+         with:
+              scan-type: fs
+              scan-ref: .
+
 
       - name: Gitleaks scan
         run: gitleaks detect source .
