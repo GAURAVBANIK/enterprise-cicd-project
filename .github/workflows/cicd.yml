@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run container
-        run: docker run -d -p 3000:3000 --name test_app node-app:latest
+        run: docker run -d -p 3000:3000 --name test_app gauravbanik/node-app:latest
       
       - name: Check app is running
         run: |
